@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>Productos</h1>
+    <div>
+        {% for producto in productos %}
+            <div>
+                <img src={{ producto.3}} alt={{producto.3}}>
+            </div>
+            <div>
+                <span>{{ producto.2 }}</span>
+            </div>
+            <div>
+                <span>{{ producto.1 }}</span>
+            </div>
+            <div>
+                <span>{{ producto.4}}</span>
+            </div>
+            <div>
+                <a href="/addCarrito/{{logged_user}}"><button>Añadir</button></a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>MENU DE ADMIN ( PRODUCTOS )</h1>  
+    <table>
+        <th>
+            <td>id</td>
+            <td>Nombre</td>
+            <td>Precio</td>
+            <td>Imagen</td>
+            <td>Descripcion</td>
+            <td>Actions</td>
+        </th>
+        {% for producto in productos %}
+            <tr>
+                <td>{{producto.0}}</td>
+                <td>{{producto.1}}</td>
+                <td>{{producto.2}}</td>
+                <td>{{producto.3}}</td>
+                <td>
+                    <a href="/editProducto/{{producto.0}}"><button>edit</button></a>
+                    <a href="/deleteProducto/{{producto.0}}"><button>delete</button></a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

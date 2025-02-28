@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>REGISTER</h1>
+    <form method="post" action="">
+        <div>
+            <label for="">Fullname:</label>
+            <input placeholder="Introduce tu fullname..." name="fullname" type="text">
+        </div>
+        <div>
+            <label for="">Username:</label>
+            <input placeholder="Introduce tu username..." name="username" type="text">
+        </div>
+        <div>
+            <label for="">Password:</label>
+            <input placeholder="Introduce tu password..." name="password" type="password">
+        </div>
+        <div>
+            <button type="submit">Registrarse</button>
+        </div>
+    </form>
+{% endblock %}

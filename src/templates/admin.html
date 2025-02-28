@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>MENU DE ADMIN</h1>
+    <div>
+        <a href="{{ url_for('adminUsers') }}"><button>USUARIOS</button></a>
+        <a href="{{ url_for('adminProductos') }}"><button>PRODUCTOS</button></a>
+    </div>
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>WELCOME {{ logged_user.username }}</h1>
+    <span>cont</span>
+    <a href="{{ url_for('productos') }}"><button>Tienda</button></a>
+{% endblock %}

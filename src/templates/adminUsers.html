@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>MENU DE ADMIN ( USUARIOS )</h1>  
+    <table>
+        <th>
+            <td>id</td>
+            <td>Username</td>
+            <td>Password</td>
+            <td>Fullname</td>
+            <td>Actions</td>
+        </th>
+        {% for user in users %}
+            <tr>
+                <td>{{user.0}}</td>
+                <td>{{user.1}}</td>
+                <td>{{user.2}}</td>
+                <td>{{user.3}}</td>
+                <td>
+                    <a href="/editUser/{{user.0}}"><button>edit</button></a>
+                    <a href="/deleteUser/{{user.0}}"><button>delete</button></a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
